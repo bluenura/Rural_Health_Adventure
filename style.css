@@ -1,0 +1,86 @@
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: #ffffff; /* PP_White */
+    color: #042c6c; /* PP_Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style for the main game container */
+#game-container {
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff; /* PP_White */
+    color: #042c6c; /* PP_Blue */
+}
+
+/* Text styling for readability */
+#game-text, #options, #prompt {
+    font-size: 16px;
+
+
+}
+
+/* Remove bullets from list and space out items */
+ul#options {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#options li {
+    font-size: 16px; /* Match with retro font size */
+    margin-bottom: 5px; /* Add spacing between options */
+/* Style for the "Start Game" text to make it look retro */
+
+}
+
+#start-game {
+    font-family: 'Press Start 2P', monospace;
+    color: #042c6c; /* PP_Blue */
+    cursor: pointer; /* Shows pointer to indicate it's clickable */
+    text-decoration: underline; /* Optional: Makes it look more link-like */
+    font-size: 16px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+#start-game:hover {
+    color: #333366; /* Slightly darker blue on hover */
+}
+
+/* Style for the list of options */
+ul#options {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+ul#options li {
+    font-family: 'Press Start 2P', monospace;
+    color: #042c6c; /* PP_Blue */
+    font-size: 16px;
+    margin-bottom: 5px;
+    cursor: pointer; /* Adds a pointer cursor */
+}
+
+ul#options li:hover {
+    color: #333366; /* Slightly darker blue on hover */
+}
+
+#play-again {
+    font-family: 'Press Start 2P', monospace;
+    color: #042c6c; /* PP_Blue */
+    font-size: 16px;
+    cursor: pointer; /* Shows pointer to indicate it's clickable */
+    text-decoration: underline; /* Optional: Makes it look more like a link */
+    margin-top: 10px;
+}
+
+#play-again:hover {
+    color: #333366; /* Slightly darker blue on hover */
+}
+
+}
