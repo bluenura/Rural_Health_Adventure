@@ -5,10 +5,10 @@ let banner = document.getElementById("banner");
 function startGame() {
     // Show the banner only on the start page
     banner.style.display = "block";
-    gameText.textContent = "You are in a rural area, far from any large city.";
+    gameText.textContent = "You receive surprising news: your birth control has failed, and you’re now dealing with an unwanted  pregnancy. What do you do next?";
     showChoices([
-        { text: "Try to find a local clinic", next: sceneLocalClinic },
-        { text: "Call a friend to discuss options", next: sceneCallFriend }
+        { text: "Visit clinic that looks like it gives abortions.", next: sceneLocalClinic },
+        { text: "Call a friend to discuss options.", next: sceneCallFriend }
     ]);
 }
 
@@ -105,57 +105,56 @@ function showChoices(choices) {
 
 function sceneLocalClinic() {
     banner.style.display = "none";
-    gameText.textContent = "You look for a local clinic, but the nearest one is hours away.";
+    gameText.textContent = "Upon arrival, you discover that the clinic is actually a Pro-Life facility, designed to look like it offers comprehensive reproductive care. The closest legitimate clinic is over 9 hours away and you don't own a car.";
     showChoices([
-        { text: "Try to arrange a car", next: sceneArrangeCar },
-        { text: "Consider the cost and look for other options", next: sceneCostConcerns }
+        { text: "Hitch hike", next: sceneArrangeCar },
+        { text: "Borrow money", next: sceneCostConcerns }
     ]);
 }
 
 function sceneCallFriend() {
     banner.style.display = "none";
-    gameText.textContent = "You call a friend who lives in the city. They’re supportive and offer advice.";
+    gameText.textContent = "Your friend suggests that you keep the baby.";
     showChoices([
-        { text: "Ask if you can stay with them", next: sceneStayWithFriend },
-        { text: "Decide to handle it yourself", next: sceneHandleAlone }
+        { text: "Ask if you can stay with them since they live near a Planned Parenthood.", next: sceneStayWithFriend },
+        { text: "You decide to handle it yourself.", next: sceneHandleAlone }
     ]);
 }
 
 function sceneArrangeCar() {
     banner.style.display = "none";
-    gameText.textContent = "You manage to arrange a car, but the cost is worrisome.";
+    gameText.textContent = "You manage to hitch a ride but you are worried you're gonna get murdered.";
     showChoices([
-        { text: "Continue", next: endGame }
+        { text: "You got murdered by the shady guy who picked you up.", next: endGame }
     ]);
 }
 
 function sceneCostConcerns() {
     banner.style.display = "none";
-    gameText.textContent = "You realize the financial burden is significant.";
+    gameText.textContent = "You borrow money from a local mob boss and get your abortion.";
     showChoices([
-        { text: "Continue", next: endGame }
+        { text: "The mob boss who loaned you money  ends up murdering you.", next: endGame }
     ]);
 }
 
 function sceneStayWithFriend() {
     banner.style.display = "none";
-    gameText.textContent = "Your friend welcomes you and offers a place to stay while you visit a clinic.";
+    gameText.textContent = "Your friend welcomes you and offers a place to stay while you visit the Planned Parenthood.";
     showChoices([
-        { text: "Continue", next: endGame }
+        { text: "She murders you when you get back.", next: endGame }
     ]);
 }
 
 function sceneHandleAlone() {
     banner.style.display = "none";
-    gameText.textContent = "You decide to handle this on your own, but the isolation feels heavy.";
+    gameText.textContent = "You decide to handle this on your own.";
     showChoices([
-        { text: "Continue", next: endGame }
+        { text: "It seems like the local clinic might be able to give you an abortion.", next: sceneLocalClinic }
     ]);
 }
 
 function endGame() {
     banner.style.display = "none";
-    gameText.textContent = "Thank you for playing. This concludes your journey.";
+    gameText.textContent = "Better stories to come! Thanks for clicking through.";
     choicesContainer.innerHTML = '<p id="play-again" onclick="startGame()">Play Again</p>';
 }
-

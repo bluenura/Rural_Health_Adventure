@@ -21,23 +21,9 @@ body {
 /* Text styling for readability */
 #game-text, #options, #prompt {
     font-size: 16px;
-
-
 }
 
-/* Remove bullets from list and space out items */
-ul#options {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul#options li {
-    font-size: 16px; /* Match with retro font size */
-    margin-bottom: 5px; /* Add spacing between options */
 /* Style for the "Start Game" text to make it look retro */
-
-}
-
 #start-game {
     font-family: 'Press Start 2P', monospace;
     color: #042c6c; /* PP_Blue */
@@ -83,4 +69,3 @@ ul#options li:hover {
     color: #333366; /* Slightly darker blue on hover */
 }
 
-}
