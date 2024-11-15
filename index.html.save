@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Health Adventure Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1 id="banner">Welcome to the Rural Reproductive Health Adventure!</h1>
+        <p id="game-text">This game is still being worked on and doesn't currently make any sense.</p>
+        <div id="choices">
+            <p id="start-game" onclick="startGame()">Start Game anyway</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

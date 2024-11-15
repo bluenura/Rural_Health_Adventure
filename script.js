@@ -7,7 +7,7 @@ function startGame() {
     banner.style.display = "block";
     gameText.textContent = "You receive surprising news: your birth control has failed, and you’re now dealing with an unwanted  pregnancy. What do you do next?";
     showChoices([
-        { text: "Visit clinic that looks like it gives abortions.", next: sceneLocalClinic },
+        { text: "Go to a clinic that seems to specialize in abortion services.", next: sceneLocalClinic },
         { text: "Call a friend to discuss options.", next: sceneCallFriend }
     ]);
 }
@@ -116,32 +116,32 @@ function sceneCallFriend() {
     banner.style.display = "none";
     gameText.textContent = "Your friend suggests that you keep the baby.";
     showChoices([
-        { text: "Ask if you can stay with them since they live near a Planned Parenthood.", next: sceneStayWithFriend },
-        { text: "You decide to handle it yourself.", next: sceneHandleAlone }
+        { text: "Nervously ask if they are willing to drive you out of state where abortion services are easier to come by.", next: sceneStayWithFriend },
+        { text: "Pretend you were joking and hang up the phone.", next: sceneHandleAlone }
     ]);
 }
 
 function sceneArrangeCar() {
     banner.style.display = "none";
-    gameText.textContent = "You manage to hitch a ride but you are worried you're gonna get murdered.";
+    gameText.textContent = "You manage to get lucky and find someone going that exact way";
     showChoices([
-        { text: "You got murdered by the shady guy who picked you up.", next: endGame }
+        { text: "but he murders you.", next: endGame }
     ]);
 }
 
 function sceneCostConcerns() {
     banner.style.display = "none";
-    gameText.textContent = "You borrow money from a local mob boss and get your abortion.";
+    gameText.textContent = "You borrow money from a local mob boss and get your abortion";
     showChoices([
-        { text: "The mob boss who loaned you money  ends up murdering you.", next: endGame }
+        { text: "but he kills you.", next: endGame }
     ]);
 }
 
 function sceneStayWithFriend() {
     banner.style.display = "none";
-    gameText.textContent = "Your friend welcomes you and offers a place to stay while you visit the Planned Parenthood.";
+    gameText.textContent = "She agrees but";
     showChoices([
-        { text: "She murders you when you get back.", next: endGame }
+        { text: "she murders you when you get back.", next: endGame }
     ]);
 }
 
@@ -155,6 +155,6 @@ function sceneHandleAlone() {
 
 function endGame() {
     banner.style.display = "none";
-    gameText.textContent = "Better stories to come! Thanks for clicking through.";
+    gameText.textContent = "fuck! Thanks for clicking through.";
     choicesContainer.innerHTML = '<p id="play-again" onclick="startGame()">Play Again</p>';
 }
